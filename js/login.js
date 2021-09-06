@@ -1,6 +1,3 @@
-document.addEventListener("DOMContentLoaded", function(e){
-
-});
 
 $.getScript("https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js", function(){
     particlesJS('particles-js',
@@ -123,6 +120,24 @@ $.getScript("https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles
 
 });
 
+document.addEventListener("DOMContentLoaded", function(e){
+
+});
 
 
-
+function almacenarUsuario () {
+  let usuario = document.getElementById("user").value;
+  let contraseña = document.getElementById("pass").value;
+if (usuario ==="") {
+  alert ("Completar Usuario")
+  return false;
+}
+else if (contraseña==="") {
+  alert ("Completar Contraseña")
+  return false;
+}
+else {
+  localStorage.setItem("GuardarUsuario", usuario);
+  return true;
+}
+};
