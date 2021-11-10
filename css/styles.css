@@ -144,3 +144,23 @@ a.custom-card:hover {
   color: white;
 
 }
+
+.clase1 {
+  height: 100px;
+  width: 200px;
+}
+
+.Perfil {
+  display: flex; 
+  flex-direction: column;
+}
+
+.profilepic{
+  height: 300px;
+}
+
+
+#fotomuestra {
+  display: none;
+  height: 200px;
+}

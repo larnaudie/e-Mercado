@@ -53,7 +53,7 @@ function showProductsList() {
             ((maxCost == undefined) || (maxCost != undefined && parseInt(products.cost) <= maxCost))) {
 
             htmlContentToAppend += `
-            <div class="list-group-item list-group-item-action">
+            <div class="list-group-item list-group-item-action" onclick="redirigir()">
                 <div class="row">
                     <div class="col-3">
                         <img src="` + products.imgSrc + `" alt="` + products.description + `" class="img-thumbnail">
@@ -74,6 +74,8 @@ function showProductsList() {
                 document.getElementById("products").innerHTML = htmlContentToAppend;
     }
 }
+
+function redirigir() {location.href="product-info.html"}
 
 
 function sortAndShowProducts(sortCriteria, productsArray) {

@@ -124,7 +124,6 @@ document.addEventListener("DOMContentLoaded", function(e){
 
 });
 
-
 function almacenarUsuario () {
   let usuario = document.getElementById("user").value;
   let contraseña = document.getElementById("pass").value;
@@ -141,3 +140,7 @@ else {
   return true;
 }
 };
+function cerrarsesion(){
+  localStorage.removeItem("nombreusuario")
+  window.location.href = "index.html"
+}
