@@ -2,7 +2,6 @@ let articles = {};
 let cost = 0;
 let quantity = 0;
 let quote = 40;
-let shippingCost = 0.15;
 
 
 
@@ -62,7 +61,7 @@ const removeArticle = () => {
 }
 
 
-const cartTotalCost = () => {
+const cartTotalCost = (shippingCost = 0.15) => {
   let arraySubtotales = document.getElementsByClassName('sub');
   let totalCost = 0;
   for (let i = 0; i < arraySubtotales.length; i++) {
@@ -80,6 +79,13 @@ const cartTotalCost = () => {
   document.getElementById("total").innerHTML = htmlTotal;
 }
 
+$("input").on("click", function() {
+// $('#rd3').value)
+  if ($('#rd1').is(':checked')) {   $("#total").html(cartTotalCost(0.15))} 
+  if ($('#rd2').is(':checked')) {   $("#total").html(cartTotalCost(0.07))} 
+  if ($('#rd3').is(':checked')) {   $("#total").html(cartTotalCost(0.05))} 
+
+})
 
 function productSubTotal(product) {
   return product.unitCost * product.count;

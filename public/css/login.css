@@ -8,11 +8,11 @@ body, html {
  font-family: 'Numans', sans-serif;
 }
 
-.container{
+/* .container{
 height: 100%
 align-content: center;
 position: relative;
-z-index: 99;}
+z-index: 99;} */
 
 .card{
 height: 370px;
